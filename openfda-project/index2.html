@@ -1,0 +1,61 @@
+<!doctype html>
+    <html>
+        <body style='background-color: #C8D5B9'>
+            <h1 align = "center">CONCEPTOS PRINCIPALES SOBRE LA API </h1>
+            <h2 align="center"><a href="index.html">Navegacion intraweb</a></h2>
+            <HR>
+            <H2>1. Busqueda de Ingredientes Activos</H2>
+                    <BLOCKQUOTE>Para realizar la busqueda de todos los farmacos disponibles en la API de openFDA (agencia del gobierno
+                        de los Estados Unidos responsable de la regulacion de alimentos, medicamentos
+                    , cosmeticos...) que contengan un Ingrediente activo especifico se debera acceder al apartado "search_drug"
+                        disponible en el menu de <a href="index.html">Navegacion intraweb</a> y utilizar el buscador o bien
+                    introducir directamente la direccion con los parametros de busqueda de la siguiente forma:
+                    <p><FIELDSET>/searchDrug?active_ingredient=name</FIELDSET></p>
+                    <p>Una vez que se han introducido los parametros de busqueda se podra acceder al listado de farmacos que
+                    cumplen los requisitos especificados con sus respectivos enlaces a las etiquetas completas de cada
+                    medicamento.</p></BLOCKQUOTE>
+            <br/>
+            <H2>2. Busqueda de Empresas</H2>
+                <blockquote><p>Si se desea buscar una empresa en especifico de forma que aparezcan las etiquetas de todos los
+                    medicamentos que esta ha fabricado se puede realizar en el apartado "search_company" o directamente de
+                    la siguiente forma:</p>
+                    <p><fieldset>/searchCompany?openfda.manufacturer_name=name</fieldset></p></blockquote>
+            <br/>
+            <H2>3. Listar Medicamentos</H2>
+                <blockquote><p>Esta opcion permite listar el nombre de medicamentos obtenidos de la API de openFDA en el apartado
+                "listDrugs" o directamente de la siguiente forma:</p>
+                    <p><fieldset>/listDrugs</fieldset></p></blockquote>
+            <br/>
+            <H2>4. Listar Empresas</H2>
+                <blockquote><p>Esta opcion permite listar el nombre de empresas obtenidas de la API de openFDA en el apartado
+                "listCompany" o directamente de la siguiente forma:</p>
+                    <p><fieldset>/listCompanies</fieldset></p></blockquote>
+            <br/>
+            <H2>5. Listar Advertencias</H2>
+                <blockquote><p>Esta opcion permite listar advertencias obtenidas de la API de openFDA en el apartado
+                "listWarnings" o directamente de la siguiente forma:</p>
+                    <p><fieldset>/listWarnings</fieldset></p></blockquote>
+            <br/>
+                <H2>6. Redireccion y contenido no autorizado</H2>
+                    <blockquote><p>Si en cualquier momento desea volver a la pagina de Navegacion Intraweb puede hacerlo
+                    pinchando en los enlaces con el nombre "Navegacion Intraweb" que aparecen en cada pagina o bien mediante el
+                    siguiente comando:</p>
+                        <p><fieldset>/redirect</fieldset></p>
+                    <p>La visualizacion del contenido en la siguiente direccion esta restringido al usuario:
+                     <p><fieldset>/secret</fieldset></p></blockquote>
+            <hr>
+            <br/>
+                <blockquote><p>Si accede a cada uno de los campos anteriores mediante el menu de Navegacion Intraweb se abrira un formulario
+                con los campos pertinentes que debera ser rellenado para acceder al contenido. En todos ellos aparece el parametro
+                "limit" que nos permite especificar el numero de etiquetas que queremos listar (en los primeros dos casos) o bien
+                el numero de elementos de la lista que queremos que se muestre (en los ultimos tres casos.</p>
+                <p>Si se desea acceder mediante url directa a los campos anteriores se debera especificar el parametro limit antes
+                mencionado de la siguiente forma:</p>
+                <p><fieldset>/listDrugs?limit=2</fieldset></p>
+                    <p>En el caso anterior el parametro limit es obligatorio</p>
+                <p><fieldset>/SearchCompany?openfda.manufacturer_name=Rxhomeo&limit=3</fieldset></p>
+                    <p>Si se busca un farmaco o una empresa sin especificar limit se asignara por defecto como limit=10</p>
+                    </blockquote>
+
+        </body>
+    </html>
