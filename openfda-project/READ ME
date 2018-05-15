@@ -1,0 +1,10 @@
+El servidor está completo (con todas las extensiones) sin embargo a la hora de ejecutarlo con el archivo "test.py" da dos fallos
+debido a la manera en la que está diseñado. 
+Los fallos son "test_web_server_init (__main__.TestOpenFDA)" y "test_web_server_init_warnings (__main__.TestOpenFDA)" ambos causados
+por la misma razón: En la página principal (Navegación Intraweb) no aparecen directamente los formularios implementados sino que 
+aparecen los links a cada uno, de modo que al acceder a estos en la misma pantalla principal surge el formulario para que el usuario
+pueda rellenarlo con el nombre de un fármaco o empresa y el parámetro limit o únicamente con limit si se trata de una lista.
+
+El test trata de obtener los formularios de esta misma página principal (en el caso del primero 4 formularios y en el segundo 5 
+contando el listWarnings) siendo que cada formulario aparece solo asociado a su dirección. Por ejemplo el formulario de 
+searchDrug aparecerá en la dirección LocalHost:8000/searchDrug.
